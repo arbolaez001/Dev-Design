@@ -1,0 +1,14 @@
+{
+  "name": "devdesign",
+  "version": "1.0.0",
+  "description": "PSD to HTML, CSS & JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Henry Arbolaez",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}
