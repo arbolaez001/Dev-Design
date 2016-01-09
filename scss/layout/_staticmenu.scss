@@ -1,0 +1,24 @@
+.static {
+	span{
+	  font-size: .85em;
+	  font-weight: 200;
+	}
+	  .left span:nth-child(1){
+	  	position:relative;
+	  	padding-left: 50px;
+	  	padding-right:10px;
+	  }
+	  .left span:nth-child(2),
+	  .center span:nth-child(2){
+			display: none;
+	  }
+	img{
+		margin-right: 10px;
+	}
+}
+@media screen and (min-width: 700px) {
+  .static .left span:nth-child(2),
+  .static .center span:nth-child(2){
+  	display:initial;
+  }
+}

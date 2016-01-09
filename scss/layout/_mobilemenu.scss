@@ -1,0 +1,97 @@
+@mixin barBFAF ($transition,$transform,$top){
+  transition:all $transition;
+  content:"";
+  transform:rotate(#{$transform}deg);
+  top:$top;
+}
+
+@mixin barIcon ($top){
+  transition:all .25s;
+  content:"";
+  position:absolute;
+  left:0;
+  top:$top;
+  height: 2px;
+  width:30px;
+  background-color:$black;
+}
+
+#nav {
+  width:100%;
+}
+.menu-collapsed {
+  transition:all .25s;
+  position:fixed;
+  top:10px;
+  left:9px;
+  height:36px;
+  width:36px;
+  z-index:1;
+  cursor:pointer;
+    ul {
+      transition:all .05s;
+      position:fixed;
+      left:-9000px;
+    }
+  }
+  .bar {
+    position:fixed;
+    left:12px;
+    top:24px;
+    height:2px;
+    width:30px;
+    background-color:$black;
+    &:before {
+      @include barIcon(-8px);
+    }
+    &:after {
+      @include barIcon(8px);
+    }
+  }
+ 
+.menu-expanded {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:all .25s;
+  text-align:center;
+  height: 555px;
+  width: 50%;
+  top:0;
+  left:0;
+  background-color:$grey;
+  ul {
+    transition:all .05s;
+    position:relative;
+    left:0;
+    z-index:2;
+    & li{
+      margin: 5%;
+    }
+  }
+  a {
+    transition:all .15s;
+    text-decoration:none;
+    color: $white;
+    font-weight: 100;
+    &:hover {
+      transition:all .15s;
+      border:2px solid rgb(255,255,255);
+      padding:5%;
+    }
+  }
+  .bar {
+    background-color:transparent;
+    transition:all .25s;
+    &:before {
+      @include barBFAF(.25s,45,-0px);      
+    }
+    &:after {
+      @include barBFAF(.25s,-45,0px);
+    }
+  }
+}
+
+.slick-list{
+  height: 500px;
+}

@@ -1,0 +1,238 @@
+/**
+ *
+ * Scss Imports
+ *
+ */
+/**
+ *
+ * Base Imports
+ *
+ */
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0; }
+
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none; }
+
+del {
+  text-decoration: line-through; }
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/**
+ *
+ * Descriptive color variables
+ *
+ */
+/* Base Styles -------------------- */
+* {
+  box-sizing: border-box; }
+
+body {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #3b3b3b;
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+img {
+  max-width: 100%; }
+
+/* Pseudo-classes ------------------ */
+a:link {
+  color: #ffa949;
+  text-decoration: none; }
+
+a:visited {
+  color: #add8e6; }
+
+a:hover {
+  color: rgba(255, 169, 73, 0.5); }
+
+.static {
+  height: 55px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between; }
+  .static > section {
+    display: flex;
+    align-items: center; }
+
+/*Slides*/
+.slides {
+  width: 100%;
+  height: 100%; }
+
+.slide {
+  height: 500px; }
+  .slide h2 {
+    margin: 25% 0 20px;
+    color: #fff; }
+
+.slide img {
+  width: 50%;
+  margin: 100px 50% 100px 10%; }
+
+.blue {
+  background: #3E89BE; }
+
+.slick-dots {
+  all: initial;
+  position: relative;
+  bottom: 50px;
+  margin-left: 50px; }
+
+.slick-dots li button:before {
+  font-size: 12px; }
+
+.slick-dots li {
+  margin: 0; }
+
+#nav {
+  width: 100%; }
+
+.menu-collapsed {
+  transition: all .25s;
+  position: fixed;
+  top: 10px;
+  left: 9px;
+  height: 36px;
+  width: 36px;
+  z-index: 1;
+  cursor: pointer; }
+  .menu-collapsed ul {
+    transition: all .05s;
+    position: fixed;
+    left: -9000px; }
+
+.bar {
+  position: fixed;
+  left: 12px;
+  top: 24px;
+  height: 2px;
+  width: 30px;
+  background-color: #000; }
+  .bar:before {
+    transition: all .25s;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -8px;
+    height: 2px;
+    width: 30px;
+    background-color: #000; }
+  .bar:after {
+    transition: all .25s;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    height: 2px;
+    width: 30px;
+    background-color: #000; }
+
+.menu-expanded {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .25s;
+  text-align: center;
+  height: 555px;
+  width: 50%;
+  top: 0;
+  left: 0;
+  background-color: #3b3b3b; }
+  .menu-expanded ul {
+    transition: all .05s;
+    position: relative;
+    left: 0;
+    z-index: 2; }
+    .menu-expanded ul li {
+      margin: 5%; }
+  .menu-expanded a {
+    transition: all .15s;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 100; }
+    .menu-expanded a:hover {
+      transition: all .15s;
+      border: 2px solid white;
+      padding: 5%; }
+  .menu-expanded .bar {
+    background-color: transparent;
+    transition: all .25s; }
+    .menu-expanded .bar:before {
+      transition: all 0.25s;
+      content: "";
+      transform: rotate(45deg);
+      top: 0px; }
+    .menu-expanded .bar:after {
+      transition: all 0.25s;
+      content: "";
+      transform: rotate(-45deg);
+      top: 0px; }
+
+.slick-list {
+  height: 500px; }
+
+.static span {
+  font-size: .85em;
+  font-weight: 200; }
+
+.static .left span:nth-child(1) {
+  position: relative;
+  padding-left: 50px;
+  padding-right: 10px; }
+
+.static .left span:nth-child(2),
+.static .center span:nth-child(2) {
+  display: none; }
+
+.static img {
+  margin-right: 10px; }
+
+@media screen and (min-width: 700px) {
+  .static .left span:nth-child(2),
+  .static .center span:nth-child(2) {
+    display: initial; } }
+
+/*# sourceMappingURL=application.css.map */

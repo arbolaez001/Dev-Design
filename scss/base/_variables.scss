@@ -1,0 +1,27 @@
+/**
+ *
+ * Descriptive color variables
+ *
+ */
+
+
+$white          : #fff;
+$black          : #000;
+$color-body     : $white;
+$grey           : #3b3b3b;
+$regent-blue    : #add8e6;
+$yellow-orange  : #ffa949;
+
+$color-link-default : $yellow-orange;
+$color-link-visited : $regent-blue;
+
+// Font stacks
+
+$stack-sans-serif : Helvetica, Arial, sans-serif;
+$stack-helvetica  : 'Helvetica Neue', $stack-sans-serif;
+$stack-abolition  : 'Abolition Regular', $stack-sans-serif;
+
+
+// Border radius
+
+$br: 50%;

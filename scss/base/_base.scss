@@ -1,0 +1,41 @@
+/* Base Styles -------------------- */
+
+// Text
+
+@mixin text($size, $l-height: null, $weight: null, $color: null) {
+  font-size: $size;
+  line-height: $l-height;
+  font-weight: $weight;
+  color: $color;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include text(1em, 1.5, $color: $grey);
+  margin: 0;
+  font-family: $stack-helvetica;
+}
+
+
+img {
+  max-width: 100%;
+}
+
+
+/* Pseudo-classes ------------------ */
+
+a {
+  &:link {
+    color: $color-link-default;
+    text-decoration: none;
+  }
+  &:visited {
+    color: $color-link-visited;
+  }
+  &:hover {
+    color: rgba($color-link-default, .5);
+  }
+}
