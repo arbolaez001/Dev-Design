@@ -275,11 +275,6 @@ a:hover {
   height: 280px;
   font-weight: 100; }
 
-#line {
-  border-bottom: 1px solid orange;
-  width: 60px;
-  margin: 10px auto 15px auto; }
-
 #section1 {
   margin-top: -28px; }
   #section1 .unique {
@@ -290,17 +285,21 @@ a:hover {
       flex: 1;
       font-size: 1.75em;
       text-transform: uppercase; }
-      #section1 .unique #line:first-child {
-        position: relative;
-        right: 35px; }
-      #section1 .unique #line:nth-child(3) {
-        position: relative;
-        left: 35px; }
       #section1 .unique div {
-        margin: auto; }
+        margin: auto;
+        width: 250px; }
         #section1 .unique div h3 {
           text-align: center;
-          font-weight: 200; } }
+          font-weight: 100; }
+        #section1 .unique div pre:first-child {
+          padding-bottom: 15px;
+          border-top: 1px solid orange;
+          width: 60px; }
+        #section1 .unique div pre:nth-child(3) {
+          padding-top: 15px;
+          border-bottom: 1px solid orange;
+          width: 60px;
+          float: right; } }
   #section1 .floorPlan {
     flex: 2;
     flex-direction: column;
@@ -312,6 +311,11 @@ a:hover {
       font-weight: 100;
       font-size: 1.75em;
       font-style: italic; }
+    #section1 .floorPlan pre {
+      padding-bottom: 15px;
+      border-top: 1px solid orange;
+      width: 60px;
+      margin: auto; }
     #section1 .floorPlan > div {
       text-align: center; }
     #section1 .floorPlan p {
@@ -319,23 +323,33 @@ a:hover {
     #section1 .floorPlan > div:nth-child(2) {
       width: 80%; }
 
+@media (min-width: 800px) {
+  #section1 .unique div h3 {
+    font-size: 2.3rem;
+    width: 225px; } }
+
 #section2 {
   display: flex; }
 
 #section2 {
   flex-direction: column; }
+  #section2 .exprience {
+    margin: 5%; }
+    #section2 .exprience pre:first-child {
+      padding-bottom: 15px;
+      border-top: 1px solid orange;
+      width: 60px; }
+    #section2 .exprience pre:nth-child(3) {
+      padding-top: 15px;
+      border-bottom: 1px solid orange;
+      width: 60px;
+      float: right; }
   #section2 h1 {
     font-weight: 100;
     text-align: center; }
   @media (min-width: 500px) {
     #section2 .exprience {
       flex: 1; }
-      #section2 .exprience #line:first-child {
-        position: relative;
-        right: 60px; }
-      #section2 .exprience #line:nth-child(3) {
-        position: relative;
-        left: 60px; }
       #section2 .exprience div {
         margin: auto;
         width: 170px; }
@@ -381,7 +395,9 @@ a:hover {
         padding-left: 2%;
         width: 49%;
         background-color: transparent;
-        border: 1px solid #fff; }
+        border: 1px solid #fff;
+        outline: 1px solid #fff;
+        border: 0; }
       #section3 .form form input:nth-child(4) {
         width: 100%; }
       #section3 .form form button,
@@ -391,5 +407,74 @@ a:hover {
     #section3 .form button,
     #section3 .form select {
       color: #fff !important; }
+  @media (min-width: 500px) {
+    #section3 .lifeStyle {
+      display: flex;
+      flex: 2; }
+      #section3 .lifeStyle div {
+        width: 60%;
+        margin: auto;
+        font-size: 1.55em; }
+        #section3 .lifeStyle div h3 {
+          font-weight: 100; }
+        #section3 .lifeStyle div > pre:first-child {
+          padding-bottom: 15px;
+          border-top: 1px solid orange;
+          width: 60px; }
+        #section3 .lifeStyle div pre:nth-child(3) {
+          padding-top: 15px;
+          border-bottom: 1px solid orange;
+          width: 60px;
+          float: right; }
+    #section3 .form {
+      flex: 2; } }
+  @media (min-width: 600px) {
+    #section3 .sec3Image {
+      display: flex;
+      flex: 1; } }
+
+#section4 {
+  color: #fff; }
+  #section4 #map {
+    width: 100%;
+    height: 500px; }
+  #section4 #information {
+    height: 175px;
+    background-color: #37373f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto; }
+    #section4 #information > .pin {
+      display: none; }
+    @media (min-width: 500px) {
+      #section4 #information .pin {
+        flex: 1;
+        background-color: #e9a92f;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center; } }
+    #section4 #information > .contact {
+      margin-left: 30px;
+      flex: 3; }
+      #section4 #information > .contact h1 {
+        font-weight: 200;
+        font-size: 1.45em;
+        font-style: italic; }
+      #section4 #information > .contact pre {
+        padding-bottom: 15px;
+        border-top: 1px solid orange;
+        width: 60px; }
+      #section4 #information > .contact h4 {
+        font-weight: 100; }
+
+@media (min-width: 600px) {
+  #section4 {
+    margin-bottom: -175px; }
+    #section4 #information {
+      max-width: 650px;
+      position: relative;
+      bottom: 200px; } }
 
 /*# sourceMappingURL=application.css.map */

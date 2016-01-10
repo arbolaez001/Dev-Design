@@ -28,6 +28,8 @@
     		width: 49%;
     		background-color: transparent;
     		border: 1px solid $white;
+    		outline: 1px solid $white;
+    		border: 0;
     	}
     	& input:nth-child(4){
 				width:100%;
@@ -43,4 +45,39 @@
 			color: $white !important;
 		} 
 	}
+	@include sm-tablet {
+		.lifeStyle{
+			display:flex;
+			flex:2;
+
+			div{
+				width:60%;
+				margin:auto;
+				font-size:1.55em;
+				h3{
+					font-weight: 100;
+				}
+				> pre:first-child{
+					padding-bottom:15px;
+					border-top: 1px solid orange;
+					width:60px;
+				}
+				pre:nth-child(3){
+					padding-top:15px;
+					border-bottom: 1px solid orange;
+					width:60px;
+					float: right;
+				}
+			}
+		}
+		.form{
+			flex:2;
+		}
+	}
+		@include tablet {
+			.sec3Image{
+				display:flex;
+				flex:1;
+			}
+		}
 }

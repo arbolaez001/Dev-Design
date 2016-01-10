@@ -1,0 +1,55 @@
+#section4 {
+	color: $white;
+	#map {
+  	width: 100%;
+  	height: 500px;
+	}
+	#information{
+		height: 175px;
+		background-color: $grey-black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    & > .pin{
+    	display:none;
+    }
+    @include sm-tablet {
+    	.pin{
+		  	flex: 1;
+		  	background-color: $yellow;
+		  	height:100%;
+		  	display: flex;
+				justify-content: center;
+				align-items: center;
+    	}
+  	}
+	  & > .contact{
+	  	margin-left: 30px;
+	  	flex: 3;
+	  	h1{
+	  		font-weight: 200;
+	  		font-size: 1.45em;
+	  		font-style: italic;
+	  	}
+	  	& pre{
+	  		padding-bottom:15px;
+				border-top: 1px solid orange;
+				width:60px;
+	  	}
+	  	h4{
+	  		font-weight: 100;
+	  	}
+	  }
+	}
+}
+@include tablet{
+	#section4 {
+    margin-bottom: -175px;
+			#information {
+			max-width: 650px;
+			position:relative;
+		  bottom:200px;
+		}
+	}
+}

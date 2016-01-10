@@ -4,6 +4,20 @@
 
 #section2{
 	flex-direction: column;
+		.exprience{
+		    margin: 5%;
+				pre:first-child{
+				padding-bottom:15px;
+				border-top: 1px solid orange;
+				width:60px;
+			}
+			pre:nth-child(3){
+				padding-top:15px;
+				border-bottom: 1px solid orange;
+				width:60px;
+				float: right;
+			}
+	}
 	h1{
 		font-weight: 100;
 		text-align: center;
@@ -11,14 +25,6 @@
 	@include sm-tablet{
 		.exprience{
 			flex: 1;
-			#line:first-child{
-				position:relative;
-				right: 60px;
-			}
-			#line:nth-child(3){
-				position:relative;
-				left: 60px;	
-			}
 			div{
 				margin: auto;
 		  	width: 170px;
