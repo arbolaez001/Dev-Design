@@ -1,0 +1,58 @@
+#footer{
+	i {
+		height: 25px;
+    width: 25px;
+  	display: inline-block;
+	  -moz-border-radius: 50%;
+	  -webkit-border-radius: 50%;
+	  border-radius: 50%;
+	  -moz-box-shadow: 0px 0px 2px #888;
+	  -webkit-box-shadow: 0px 0px 2px #888;
+	  box-shadow: 0px 0px 2px $white;
+    padding: 5px
+	}
+	background-color: $grey-black;
+	@include text($color: $white, $weight: 100);
+	display: flex;
+  flex-direction: column;
+	justify-content: center;
+  text-align: center;
+  padding:6%;
+  h4:first-child{
+  	@include text($size: 1.3em, $weight: 100);
+  	margin-bottom: 10px;
+  }
+  .topFooter > h4:nth-child(1n+2){
+  	@include text($size: 0.75em, $weight: 100);
+  }
+  .socialMedia{
+  	margin: 60px;
+  }
+  button{
+    font-size: 1.75em;
+    margin-right: 5%;
+  }
+}
+.bottFooter{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+  > p{
+
+    margin-right: auto;
+    font-size: .5em;
+  }
+  div{
+    display: none;
+  }
+  @include tablet {
+    div{
+      display: inherit;
+      font-size:.6em;
+      i{
+        padding: 0 2%;
+      }
+    }
+  }
+}

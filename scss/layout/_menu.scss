@@ -3,8 +3,7 @@
 }
 
 .static {
-	font-size: .85em;
-	font-weight: 200;
+  @include text($size: 0.85em, $weight: 200);
 	height: 55px;
   display: flex;
   width:100%;
@@ -47,8 +46,7 @@
     }
   }
   .bar {
-    font-size: .85em;
-    font-weight: 200;
+    @include text($size: 0.85em, $weight: 200);
     position:absolute;
     top: 15px;
     height:2px;

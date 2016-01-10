@@ -28,8 +28,7 @@
 	  	margin-left: 30px;
 	  	flex: 3;
 	  	h1{
-	  		font-weight: 200;
-	  		font-size: 1.45em;
+	  		@include text($size: 1.45em, $weight: 200);
 	  		font-style: italic;
 	  	}
 	  	& pre{

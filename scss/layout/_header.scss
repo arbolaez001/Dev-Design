@@ -47,8 +47,7 @@
   color:$white;
 }
 .slick-dots li button:before{
-	font-size: 12px;
-  color:$white;
+  @include text($size: 12px, $color: $white);
 }
 .slick-dots li{
 	margin:0;
