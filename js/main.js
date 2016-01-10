@@ -5,6 +5,9 @@ $('.slides').slick({
 	dots: true
 });
 
+$(".menu-collapsed").click(function() {
+  $(this).toggleClass("menu-expanded");
+});
 
 function initialize() {
   var mapCanvas = document.getElementById('map');
