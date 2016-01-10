@@ -1,27 +1,39 @@
-@mixin barBFAF ($transition,$transform,$top){
-  transition:all $transition;
-  content:"";
-  transform:rotate(#{$transform}deg);
-  top:$top;
-}
-
-@mixin barIcon ($top){
-  transition:all .25s;
-  content:"";
-  position:absolute;
-  left:0;
-  top:$top;
-  height: 2px;
-  width:30px;
-  background-color:$black;
-}
-
 #nav {
   width:100%;
 }
+
+.static {
+	font-size: .85em;
+	font-weight: 200;
+	height: 55px;
+  display: flex;
+  width:100%;
+  align-items: center;
+  justify-content: flex-end;
+	& > section{
+		display:flex;
+	  align-items: center;
+	}
+  .left span:nth-child(1){
+  	position:relative;
+  	padding-left: 100px;
+  	padding-right:10px;
+  }
+  .left span,
+  .center span:nth-child(2){
+		display: none;
+  }
+	img{
+		margin-right: 10px;
+	}
+	> div{
+		margin-right: 5px;
+	}
+}
+
 .menu-collapsed {
   transition:all .25s;
-  position:fixed;
+  position:absolute;
   top:10px;
   left:9px;
   height:36px;
@@ -35,20 +47,25 @@
     }
   }
   .bar {
-    position:fixed;
-    left:12px;
-    top:24px;
+    font-size: .85em;
+    font-weight: 200;
+    position:absolute;
+    top: 15px;
     height:2px;
     width:30px;
-    background-color:$black;
+    background-color:$black;    
     &:before {
       @include barIcon(-8px);
     }
     &:after {
       @include barIcon(8px);
     }
+    > span {
+      position: relative;
+      left: 35px;
+      bottom: 8px;
+    }
   }
- 
 .menu-expanded {
   display: flex;
   align-items: center;
@@ -60,7 +77,7 @@
   top:0;
   left:0;
   background-color:$grey;
-  ul {
+    ul {
     transition:all .05s;
     position:relative;
     left:0;
@@ -91,7 +108,19 @@
     }
   }
 }
-
-.slick-list{
-  height: 500px;
+@include tablet {
+  .menu-expanded {
+    width: 30%;  
+    height: 653px;  
+  }
+  .static{
+    justify-content: space-between;
+  }
+  .static .left span,
+  .static .center span:nth-child(2){
+    display:initial;
+  }
 }
+
+
+

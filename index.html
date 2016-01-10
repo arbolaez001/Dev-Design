@@ -15,7 +15,7 @@
 	<div id="main-section">
 		<div class="mobile">
 			<div class="menu-collapsed">
-	  		<div class="bar"></div>
+	  		<div class="bar"><span>MENU</span></div>
 					<nav id="nav">
 				  	<ul>
 					    <li><a href="#">HOME</a></li>
@@ -29,7 +29,6 @@
 		</div>
 		<div class="static">
 			<section class="left">
-				<span>MENU</span>
 				<span>CALL: 855.555.5555</span>
 			</section>	
 			<section class="center">
@@ -42,31 +41,27 @@
 			</div>
 		</div>
 		<section class="banner"> <!-- Carousel -->
-
 			<div class="slides"> <!-- Slick Carousel -->
-				<div class="slide blue">
+				<div class="slide">				
 				  <div>
-				    <h2>Lorem ipsum dolor sit amet</h2>
-				  </div>
-				  <div>
-				    <img src="" alt="" />
+				  	<p></p>
+				    	<h2>LOREM IPSUM<br>DOLOR SIT AMET</h2>
+				   	<p></p>
 				  </div>
 				</div><!--/Slide 1-->
-			<div class="slide blue">
-				<div>
-				  <h2>Lorem ipsum dolor sit amet</h2>
-				</div>
-				<div>
-				  <img src="" alt="" />
-				</div>
+				<div class="slide">				
+				  <div>
+				  	<p></p>
+				    	<h2>LOREM IPSUM<br>DOLOR SIT AMET</h2>
+				   	<p></p>
+				  </div>
 				</div><!--/Slide 2-->
-			<div class="slide blue">
-				<div>
-				  <h2>Lorem ipsum dolor sit amet</h2>
-				</div>
-				<div>
-				  <img src="" alt="" />
-				</div>
+				<div class="slide">				
+				  <div>
+				  	<p></p>
+				    	<h2>LOREM IPSUM<br>DOLOR SIT AMET</h2>
+				   	<p></p>
+				  </div>
 				</div><!--/Slide 3-->
   		</div>
 		</section>
@@ -74,24 +69,36 @@
 
 	<div id="section1">
 		<section class="unique">
-			<h3>Unique and Sophisticated</h3>
+			<div>
+				<p id="line"></p>
+					<h3>Unique and Sophisticated</h3>
+				<p id="line"></p>
+			</div>
 		</section>
 
-		<section class="floorPlans">
-			<h2>Lorem ipsum dolor sit amet.</h2>
-			<span>---------</span>
-			<p>Luxury Apartments offers 1-, 2-, and 3-Bedrooms along with Loft-style homes, nestled in the sunny beauty of north scotttsdale.</p>
-			<h5>FLOOR PLANS >></h5>
+		<section class="floorPlan">
+			<div>
+				<h3>Lorem ipsum dolor sit amet.</h3>
+				<p id="line"></p>
+			</div>
+			<div>
+				<p>Luxury Apartments offers 1-, 2-, and 3-Bedrooms along with Loft-style homes, nestled in the sunny beauty of north scotttsdale.</p>
+				<p>FLOOR PLANS >></p>
+			</div>
 		</section>
 	</div>
 
 	<div id="section2">
 		<section class="sec2Image">
-			<img src="" alt="">
+			<img src="img/man.png" alt="">
 		</section>
 
 		<section class="exprience">
-			<h3>EXPERIENCE LUXURY AND COMFORT WITH STUNNING VIEWS OF NORTH SCOTTSDALE.</h3>
+			<p id="line"></p>
+			<div>
+				<h1>EXPERIENCE LUXURY AND COMFORT WITH STUNNING VIEWS OF NORTH SCOTTSDALE.</h1>
+			</div>
+			<p id="line"></p>
 		</section>
 	</div>
 
@@ -100,10 +107,21 @@
 			<h3>CHOOSE YOUR LIFESTYLE. FIND YOUR NEW HOME.</h3>
 		</section>
 		<section class="sec3Image">
-			<img src="" alt="">
+			<img src="img/woman.png" alt="">
 		</section>
 		<section class="form">
-			<form action="index_submit" method="get" accept-charset="utf-8">
+			<form action="/" method="POST" accept-charset="utf-8">
+			  <input type="text" placeholder="FIRST NAME"/>
+			  <input type="text" placeholder="LAST NAME"/><br>
+			  <input type="text" placeholder="EMAIL"/>
+			  <select name="feedback">
+			  	<option selected="selected" value="default">HOW DID YOU HEAR ABOUT US?</option>
+				  <option value="linkedin">Linkedin</option>
+				  <option value="facebook">Facebook</option>
+				  <option value="twitter">Twitter</option>
+				  <option value="instagram">Instagram</option>
+				</select>
+			  <button type="submit" class="button"/>SUBMIT</button>
 			</form>
 		</section>
 	</div>

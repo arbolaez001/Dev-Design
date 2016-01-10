@@ -1,0 +1,46 @@
+#section3,
+.sec3Image{
+	display: flex;
+	height:320px;
+}
+
+#section3{
+	margin-top: -6px;
+	.lifeStyle,
+	.sec3Image{
+		display:none;
+	}
+	.form{
+		background-color: $yellow;
+		width:100%;
+		display:flex;
+		justify-content: center;
+    align-items: center;
+		& form {
+			width: 80%;
+    	text-align: center;
+    	input,
+    	button,
+    	select{
+    		height: 3em;
+    		margin-bottom: 5%;
+    		padding-left: 2%;
+    		width: 49%;
+    		background-color: transparent;
+    		border: 1px solid $white;
+    	}
+    	& input:nth-child(4){
+				width:100%;
+    	}
+    	button,
+    	select{
+    		width:100%;
+    	}
+		}
+		input::-webkit-input-placeholder,
+		button,
+		select{
+			color: $white !important;
+		} 
+	}
+}

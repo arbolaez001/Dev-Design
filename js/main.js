@@ -1,6 +1,6 @@
 $('.slides').slick({
 	fade: true,
-	autoplay: true,
+	autoplay: false,
 	arrows: false,
 	dots: true
 });

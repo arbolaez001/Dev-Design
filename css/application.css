@@ -82,20 +82,10 @@ a:link {
   text-decoration: none; }
 
 a:visited {
-  color: #add8e6; }
+  color: #000; }
 
 a:hover {
   color: rgba(255, 169, 73, 0.5); }
-
-.static {
-  height: 55px;
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between; }
-  .static > section {
-    display: flex;
-    align-items: center; }
 
 /*Slides*/
 .slides {
@@ -103,17 +93,33 @@ a:hover {
   height: 100%; }
 
 .slide {
+  background: url("../img/bg1.png") no-repeat;
+  background-size: 100% 100%;
   height: 500px; }
-  .slide h2 {
-    margin: 25% 0 20px;
-    color: #fff; }
+  .slide div {
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    font-size: 1.5em; }
+    .slide div h2 {
+      font-weight: 100; }
+    .slide div p:nth-child(1) {
+      border-top: 1px solid orange;
+      width: 60px;
+      position: relative;
+      bottom: 15px;
+      right: 15px; }
+    .slide div p:nth-child(3) {
+      border-bottom: 1px solid orange;
+      width: 60px;
+      position: relative;
+      bottom: -15px;
+      left: 140px; }
 
-.slide img {
-  width: 50%;
-  margin: 100px 50% 100px 10%; }
-
-.blue {
-  background: #3E89BE; }
+.slick-slider {
+  margin: 0; }
 
 .slick-dots {
   all: initial;
@@ -121,18 +127,54 @@ a:hover {
   bottom: 50px;
   margin-left: 50px; }
 
+.slick-dots li.slick-active button:before {
+  color: #fff; }
+
 .slick-dots li button:before {
-  font-size: 12px; }
+  font-size: 12px;
+  color: #fff; }
 
 .slick-dots li {
   margin: 0; }
 
+.slick-list {
+  height: 500px; }
+
+@media (min-width: 600px) {
+  .slick-list {
+    height: 600px; }
+  .slide {
+    height: 600px; } }
+
 #nav {
   width: 100%; }
 
+.static {
+  font-size: .85em;
+  font-weight: 200;
+  height: 55px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end; }
+  .static > section {
+    display: flex;
+    align-items: center; }
+  .static .left span:nth-child(1) {
+    position: relative;
+    padding-left: 100px;
+    padding-right: 10px; }
+  .static .left span,
+  .static .center span:nth-child(2) {
+    display: none; }
+  .static img {
+    margin-right: 10px; }
+  .static > div {
+    margin-right: 5px; }
+
 .menu-collapsed {
   transition: all .25s;
-  position: fixed;
+  position: absolute;
   top: 10px;
   left: 9px;
   height: 36px;
@@ -145,9 +187,10 @@ a:hover {
     left: -9000px; }
 
 .bar {
-  position: fixed;
-  left: 12px;
-  top: 24px;
+  font-size: .85em;
+  font-weight: 200;
+  position: absolute;
+  top: 15px;
   height: 2px;
   width: 30px;
   background-color: #000; }
@@ -169,6 +212,10 @@ a:hover {
     height: 2px;
     width: 30px;
     background-color: #000; }
+  .bar > span {
+    position: relative;
+    left: 35px;
+    bottom: 8px; }
 
 .menu-expanded {
   display: flex;
@@ -211,28 +258,138 @@ a:hover {
       transform: rotate(-45deg);
       top: 0px; }
 
-.slick-list {
-  height: 500px; }
-
-.static span {
-  font-size: .85em;
-  font-weight: 200; }
-
-.static .left span:nth-child(1) {
-  position: relative;
-  padding-left: 50px;
-  padding-right: 10px; }
-
-.static .left span:nth-child(2),
-.static .center span:nth-child(2) {
-  display: none; }
-
-.static img {
-  margin-right: 10px; }
-
-@media screen and (min-width: 700px) {
-  .static .left span:nth-child(2),
+@media (min-width: 600px) {
+  .menu-expanded {
+    width: 30%;
+    height: 653px; }
+  .static {
+    justify-content: space-between; }
+  .static .left span,
   .static .center span:nth-child(2) {
     display: initial; } }
+
+#section1,
+.floorPlan,
+.unique {
+  display: flex;
+  height: 280px;
+  font-weight: 100; }
+
+#line {
+  border-bottom: 1px solid orange;
+  width: 60px;
+  margin: 10px auto 15px auto; }
+
+#section1 {
+  margin-top: -28px; }
+  #section1 .unique {
+    display: none; }
+  @media (min-width: 600px) {
+    #section1 .unique {
+      display: flex;
+      flex: 1;
+      font-size: 1.75em;
+      text-transform: uppercase; }
+      #section1 .unique #line:first-child {
+        position: relative;
+        right: 35px; }
+      #section1 .unique #line:nth-child(3) {
+        position: relative;
+        left: 35px; }
+      #section1 .unique div {
+        margin: auto; }
+        #section1 .unique div h3 {
+          text-align: center;
+          font-weight: 200; } }
+  #section1 .floorPlan {
+    flex: 2;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #37373f; }
+    #section1 .floorPlan h3 {
+      font-weight: 100;
+      font-size: 1.75em;
+      font-style: italic; }
+    #section1 .floorPlan > div {
+      text-align: center; }
+    #section1 .floorPlan p {
+      font-size: .85em; }
+    #section1 .floorPlan > div:nth-child(2) {
+      width: 80%; }
+
+#section2 {
+  display: flex; }
+
+#section2 {
+  flex-direction: column; }
+  #section2 h1 {
+    font-weight: 100;
+    text-align: center; }
+  @media (min-width: 500px) {
+    #section2 .exprience {
+      flex: 1; }
+      #section2 .exprience #line:first-child {
+        position: relative;
+        right: 60px; }
+      #section2 .exprience #line:nth-child(3) {
+        position: relative;
+        left: 60px; }
+      #section2 .exprience div {
+        margin: auto;
+        width: 170px; }
+      #section2 .exprience h1 {
+        text-align: left;
+        font-size: 1.4em; } }
+
+@media (min-width: 500px) {
+  #section2 {
+    flex-direction: row; }
+    #section2 .sec2Image {
+      flex: 1; }
+      #section2 .sec2Image > img {
+        height: 350px;
+        width: 90%; }
+    #section2 .exprience {
+      margin: auto; } }
+
+#section3,
+.sec3Image {
+  display: flex;
+  height: 320px; }
+
+#section3 {
+  margin-top: -6px; }
+  #section3 .lifeStyle,
+  #section3 .sec3Image {
+    display: none; }
+  #section3 .form {
+    background-color: #e9a92f;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #section3 .form form {
+      width: 80%;
+      text-align: center; }
+      #section3 .form form input,
+      #section3 .form form button,
+      #section3 .form form select {
+        height: 3em;
+        margin-bottom: 5%;
+        padding-left: 2%;
+        width: 49%;
+        background-color: transparent;
+        border: 1px solid #fff; }
+      #section3 .form form input:nth-child(4) {
+        width: 100%; }
+      #section3 .form form button,
+      #section3 .form form select {
+        width: 100%; }
+    #section3 .form input::-webkit-input-placeholder,
+    #section3 .form button,
+    #section3 .form select {
+      color: #fff !important; }
 
 /*# sourceMappingURL=application.css.map */

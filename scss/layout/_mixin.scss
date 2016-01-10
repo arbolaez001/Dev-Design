@@ -1,0 +1,30 @@
+@mixin barBFAF ($transition,$transform,$top){
+  transition:all $transition;
+  content:"";
+  transform:rotate(#{$transform}deg);
+  top:$top;
+}
+
+@mixin barIcon ($top){
+  transition:all .25s;
+  content:"";
+  position:absolute;
+  left:0;
+  top:$top;
+  height: 2px;
+  width:30px;
+  background-color:$black;
+}
+
+$tablet-width: 600px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width})  {
+    @content;
+  }
+}
+@mixin sm-tablet {
+  @media (min-width: 500px)  {
+    @content;
+  }
+}

@@ -1,0 +1,63 @@
+#section1, 
+.floorPlan,
+.unique {
+	display:flex;
+	height:280px;
+	font-weight: 100;
+}
+#line{
+		border-bottom: 1px solid orange;
+		width: 60px;
+		margin: 10px auto 15px auto;
+	}
+#section1 {
+	margin-top: -28px;
+	.unique{
+		display:none;
+	}
+	@include tablet{
+	.unique{
+		display:flex;
+		flex:1;
+		font-size: 1.75em;
+		text-transform: uppercase;
+		#line:first-child{
+			position:relative;
+			right:35px;
+		}
+		#line:nth-child(3){
+			position:relative;
+			left:35px;
+		}
+		div{
+			margin:auto;
+				h3{
+					text-align: center;
+					font-weight: 200;
+				}
+			}
+		}
+	}
+	.floorPlan{
+		flex:2;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		color:$white;
+		background-color: $grey-black;
+		& h3{
+			font-weight: 100;
+			font-size: 1.75em;
+			font-style: italic;
+		}
+		> div{
+			text-align: center;
+		}
+		p{
+			font-size:.85em;
+		}
+		> div:nth-child(2){
+			width: 80%;
+		}
+	}
+}

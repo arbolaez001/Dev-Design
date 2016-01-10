@@ -1,0 +1,47 @@
+#section2{
+	display: flex;
+}
+
+#section2{
+	flex-direction: column;
+	h1{
+		font-weight: 100;
+		text-align: center;
+	}
+	@include sm-tablet{
+		.exprience{
+			flex: 1;
+			#line:first-child{
+				position:relative;
+				right: 60px;
+			}
+			#line:nth-child(3){
+				position:relative;
+				left: 60px;	
+			}
+			div{
+				margin: auto;
+		  	width: 170px;
+			}
+			h1{
+				text-align: left;
+				font-size: 1.4em;
+			}
+		}
+	}
+}
+@include sm-tablet{
+	#section2{
+		flex-direction: row;
+		.sec2Image{
+			flex: 1;
+			> img{ 
+				height: 350px; 
+				width:90%
+			}
+		}
+		.exprience{
+			margin:auto;	
+		}
+	}
+}
