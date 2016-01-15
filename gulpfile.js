@@ -8,7 +8,7 @@ var gulp = require('gulp'),
 		uglify = require('gulp-uglify'),
 	   	 del = require("del"),
  minifyCss = require('gulp-minify-css'),
- 	gh_pages = require('gulp-gh-pages');
+ 	ghPages = require('gulp-gh-pages');
 
 
 gulp.task('compileSass', function(){
@@ -55,9 +55,9 @@ gulp.task("clean", function(){
 	del("dist");
 	});
 
-gulp.task("deploy",function(){
-	gulp.src("dist/**/*")
-	.pipe(gh_pages());
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
 	});
 
 gulp.task('default', ["clean", "build"]);
