@@ -16,7 +16,7 @@
   background-color:$black;
 }
 
-$tablet-width: 600px;
+$tablet-width: 700px;
 
 @mixin tablet {
   @media (min-width: #{$tablet-width})  {

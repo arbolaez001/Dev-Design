@@ -3,7 +3,6 @@
 	display: flex;
 	height:320px;
 }
-
 #section3{
 	margin-top: -6px;
 	.lifeStyle,
@@ -25,7 +24,7 @@
     		height: 3em;
     		margin-bottom: 5%;
     		padding-left: 2%;
-    		width: 49%;
+    		width: 48.5%;
     		background-color: transparent;
     		border: 1px solid $white;
     		outline: 1px solid $white;
@@ -43,7 +42,10 @@
 		button,
 		select{
 			color: $white !important;
-		} 
+		}
+		button[disabled="disabled"]{
+			background:red;
+		}
 	}
 	@include sm-tablet {
 		.lifeStyle{

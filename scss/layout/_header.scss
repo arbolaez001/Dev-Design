@@ -1,7 +1,7 @@
 /*Slides*/
 %background{
   height:600px;
-  background-size:100% 100%!important;
+  background-size: cover !important;
 }
 
 .slides {
@@ -43,7 +43,7 @@
         left: 140px;
       }
   	}
-  } 
+  }
 }
 .slick-slider{
   margin:0;
@@ -64,29 +64,31 @@
 	margin:0;
 }
 
-.slick-prev:before, 
-.slick-next:before { 
-  font-size: 60px;
-}
+@include tablet{
+	.slick-prev:before,
+	.slick-next:before {
+	  font-size: 60px;
+	}
 
-.slick-prev {
-  left: 10px;
-  z-index: 1;
-    &:before{
-    content: '‹';
-  }
-}
-.slick-next{
-  right: 18px;
-  &:before{
-    content: '›';
-  }
+	.slick-prev {
+	  left: 10px;
+	  z-index: 1;
+	    &:before{
+	    content: '‹';
+	  }
+	}
+	.slick-next{
+	  right: 18px;
+	  &:before{
+	    content: '›';
+	  }
+	}
 }
 .slick-list{
   height: 500px;
 }
 
-@include tablet{ 
+@include tablet{
   .slick-list{
     height: 600px;
   }

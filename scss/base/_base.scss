@@ -13,17 +13,21 @@
   box-sizing: border-box;
 }
 
-body {
+body, html {
   @include text(1em, 1.5, $color: $grey);
-  margin: 0;
   font-family: $stack-helvetica;
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 }
+
 
 
 img {
   max-width: 100%;
 }
-
 
 /* Pseudo-classes ------------------ */
 
