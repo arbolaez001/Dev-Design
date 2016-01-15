@@ -26,33 +26,11 @@
   	@include text($size: 0.75em, $weight: 100);
   }
   .socialMedia{
-  	margin: 60px;
+  	margin: 35px;
   }
   button{
-    font-size: 1.75em;
-    margin:0 2.5%;
-  }
-}
-.bottFooter{
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1%;
-  > p{
-
-    margin-right: auto;
-    font-size: .5em;
-  }
-  div{
-    display: none;
-  }
-  @include tablet {
-    div{
-      display: inherit;
-      font-size:.6em;
-      i{
-        padding: 0 2%;
-      }
-    }
+    font-size: 1.45em;
+    background: white;
+    border-radius: 50%;
   }
 }

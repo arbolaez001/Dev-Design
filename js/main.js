@@ -12,10 +12,11 @@ $(".menu-collapsed").click(function() {
 function initialize() {
   var mapCanvas = document.getElementById('map');
   var mapOptions = {
-    center: new google.maps.LatLng(25.7752495,-80.1895104),
+    center: new google.maps.LatLng(25.7824618,-80.3011208),
     scrollwheel: false,
-    zoom: 13,
+    zoom: 11,
     navigationControl: false,
+    streetViewControl: false,
     scaleControl: false,
     draggable: false,
     mapTypeId: google.maps.MapTypeId.ROADMAP
@@ -30,7 +31,7 @@ function initialize() {
   });
 
   var infowindow = new google.maps.InfoWindow({
-    content: '<span> Marker Location: 261 NE 1st Street, Miami, FL 33132 </span>'
+    content: '<span> Miami, FL</span> '
   });
   google.maps.event.addListener(marker, 'click', function() {
     infowindow.open(map, marker);

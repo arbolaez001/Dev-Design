@@ -1,39 +1,50 @@
 /*Slides*/
+%background{
+  height:600px;
+  background-size:100% 100%!important;
+}
+
 .slides {
   width: 100%;
   height: 100%;
+  .slide {
+    &-1 {
+      background: url("../img/land.jpeg") no-repeat;
+      @extend %background;
+    }&-2 {
+      background: url("../img/girl.jpeg") no-repeat;
+      @extend %background;
+    }&-3 {
+      background: url("../img/mount.jpeg") no-repeat;
+      @extend %background;
+    }
+  		& div {
+      text-align: center;
+    	color: #fff;
+      position: absolute;
+      top: 50%;
+      left:10%;
+      font-size:1.5em;
+      & h2{
+        font-weight: 100;
+      }
+      p:nth-child(1){
+        border-top: 1px solid orange;
+        width: 60px;
+        position: relative;
+        bottom: 15px;
+        right: 15px;
+      }
+      p:nth-child(3){
+        border-bottom: 1px solid orange;
+        width: 60px;
+        position: relative;
+        bottom: -15px;
+        left: 140px;
+      }
+  	}
+  } 
 }
-.slide {
-  background: url("../img/bg1.png") no-repeat;
-  background-size: 100%100%;
-    height: 500px;
-		& div {
-    text-align: center;
-  	color: #fff;
-    position: absolute;
-    top: 50%;
-    left:10%;
-    font-size:1.5em;
-    & h2{
-      font-weight: 100;
-    }
-    p:nth-child(1){
-      border-top: 1px solid orange;
-      width: 60px;
-      position: relative;
-      bottom: 15px;
-      right: 15px;
-    }
-    p:nth-child(3){
-      border-bottom: 1px solid orange;
-      width: 60px;
-      position: relative;
-      bottom: -15px;
-      left: 140px;
-    }
-	}
-}
-
 .slick-slider{
   margin:0;
 }
